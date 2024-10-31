@@ -68,9 +68,9 @@ build:
     - HF_HUB_ENABLE_HF_TRANSFER=1 python -c "from huggingface_hub import snapshot_download; snapshot_download('LanguageBind/Video-LLaVA-7B-hf', repo_type='model', local_files_only=False)"
     - echo "video-llava env is ready!"
 
-environment:
-  HUGGING_FACE_HUB_TOKEN: ""
-  HF_HUB_ENABLE_HF_TRANSFER: "1"
+# environment:
+#   HUGGING_FACE_HUB_TOKEN: "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"
+#   HF_HUB_ENABLE_HF_TRANSFER: "1"
 
 predict: "predict.py:Predictor"
 image: "r8.im/uncensored-com/video-llava-7b-hf"

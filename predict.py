@@ -60,6 +60,8 @@ class Predictor:
 
         # Call the asynchronous setup for loading the model
         asyncio.run(self.main_setup(model_id))
+        elapsed_time = time.time() - start_time
+        print_log(f"Model setup completed in {elapsed_time:.2f} seconds.")
 
     async def main_setup(self, model_id):
         # Run multiple setup tasks concurrently
